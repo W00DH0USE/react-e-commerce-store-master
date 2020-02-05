@@ -25,3 +25,92 @@ body {
 .text-bright {
   color: var(--lightBlue);
 }
+
+
+/* Navbar */
+.navbar {
+  background: var(--mainBlue);
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+}
+
+.navbar-logo {
+  display: inline-block;
+  padding-top: .3125rem;
+  padding-bottom: .3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-style: none;
+}
+
+.navbar-ul {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  align-items: center!important;
+  margin-top: 0;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+.navbar-ul li {
+  margin-left: 3rem!important;
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+.navbar-link {
+  color: var(--mainWhite) !important;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  display: block;
+  padding: .5rem 1rem;
+  text-decoration: none;
+}
+
+.cart-link {
+  margin-left: auto!important;
+}
+
+.buttonContainer {
+  text-transform: capitalized;
+  font-size: 1.4rem;
+  background: transparent;
+  border: 0.05rem solid var(--lightBlue);
+  color: var(--lightBlue);
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  margin: 0.2rem 0.5rem 0.2rem 0;
+  transition: all 0.5s ease-in-out;
+}
+.buttonContainer:hover {
+  background: var(--lightBlue);
+  color: var(--mainBlue);
+}
+.buttonContainer:focus {
+  outline: none;
+}
+.buttonContainer span {
+  margin-right: .5rem!important;
+}
+
+@media (min-width: 576px) {
+  .navbar {
+    padding-left: 3rem!important;
+    padding-right: 3rem!important;
+    flex-flow: row nowrap !important;
+    justify-content: flex-start !important;
+  }
+}
