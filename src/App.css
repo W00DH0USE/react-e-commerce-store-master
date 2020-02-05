@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .buttonContainer {
-  text-transform: capitalized;
+  text-transform: capitalize;
   font-size: 1.4rem;
   background: transparent;
   border: 0.05rem solid var(--lightBlue);
@@ -121,6 +121,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 .buttonContainer span {
   margin-right: .5rem!important;
+}
+
+.buttonContainer-orange {
+  border-color: var(--mainYellow);
+  color: var(--mainYellow);
+}
+.buttonContainer-orange:hover {
+  background: var(--mainYellow);
+  color: var(--mainBlue);
 }
 
 @media (min-width: 576px) {
@@ -275,4 +284,78 @@ h1, h2, h3, h4, h5, h6 {
 }
 .image-container:hover .cart-btn {
   transform: translate(0, 0);
+}
+
+
+/* Details */
+.details-container {
+  padding-top: 3rem!important;
+  padding-bottom: 3rem!important;
+}
+
+.details-title {
+  margin-top: 3rem!important;
+  margin-bottom: 3rem!important;
+  margin-left: auto!important;
+  margin-right: auto!important;
+  flex: 0 0 83.333333%;
+  max-width: 83.333333%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  text-align: center!important;
+}
+
+.details-image-container,
+.details-info-container {
+  margin-left: auto!important;
+  margin-right: auto!important;
+  margin-bottom: 1rem!important;
+  margin-top: 1rem!important;
+  flex: 0 0 83.333333%;
+  max-width: 83.333333%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 768px) {
+  .details-image-container,
+  .details-info-container {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+.details-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.details-info-container {
+  text-transform: capitalize!important;
+}
+
+.details-made-by {
+  color: #6c757d!important;
+  text-transform: uppercase!important;
+  margin-top: 1rem!important;
+  margin-bottom: .5rem!important;
+}
+.details-made-by span {
+  text-transform: uppercase!important;
+}
+
+.details-product-info-title {
+  font-weight: 700!important;
+  text-transform: capitalize!important;
+  margin-top: 1rem!important;
+  margin-bottom: 0!important;
+}
+
+.details-product-info {
+  color: #6c757d!important;
+  font-size: 1.25rem;
+  font-weight: 300;
 }
