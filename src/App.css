@@ -12,6 +12,23 @@ body {
   color: var(--mainDark) !important;
 }
 
+/* Global */
+h1 {
+  font-weight: 700!important;
+  font-size: 2.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.text-capitalize {
+  text-transform: capitalize!important;
+}
+
 .text-title {
   font-family: "Permanent Marker", cursive;
   letter-spacing: 0.3rem;
@@ -113,4 +130,27 @@ body {
     flex-flow: row nowrap !important;
     justify-content: flex-start !important;
   }
+}
+
+
+/* Product List */
+.productList {
+  padding-top: 3rem!important;
+  padding-bottom: 3rem!important;
+}
+
+
+/* Title */
+.title {
+  text-align: center!important;
+  margin-left: auto!important;
+  margin-right: auto!important;
+  margin-bottom: .5rem!important;
+  margin-top: .5rem!important;
+  flex: 0 0 83.333333%;
+  max-width: 83.333333%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
 }
