@@ -154,3 +154,125 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 15px;
   padding-left: 15px;
 }
+
+/* Product */
+.productWrapper {
+  flex: 0 0 75%;
+  max-width: 75%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 1rem auto!important;
+}
+@media (min-width: 768px) {
+  .productWrapper {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .productWrapper {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  border-color: transparent !important;
+  transition: all 1s linear;
+}
+.card:hover {
+  border: 0.04rem solid rgba(0,0,0,.2);
+  box-shadow: 2px 2px 5px 0 rgba(0,0,0,.2);
+}
+.card:hover .card-info{
+  background: rgba(247,247,247) !important;
+}
+
+.image-container {
+  padding: 3rem!important;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image {
+  border-top-left-radius: calc(.25rem - 1px);
+  border-top-right-radius: calc(.25rem - 1px);
+  flex-shrink: 0;
+  width: 100%;
+  vertical-align: middle;
+  border-style: none;
+  transition: all 1s linear;
+}
+.image-container:hover .card-image {
+  transform: scale(1.2);
+}
+
+.card-info {
+  justify-content: space-between!important;
+  display: flex!important;
+  padding: .75rem 1.25rem;
+  background-color: rgba(0,0,0,.03);
+  background: transparent !important;
+  border-top: transparent !important;
+  transition: all 1s linear;
+}
+.card-info:last-child {
+  border-radius: 0 0 calc(.25rem - 1px) calc(.25rem - 1px);
+}
+
+.card-title {
+  margin-bottom: 0!important;
+  align-self: center!important;
+  margin-top: 0;
+}
+
+.card-price {
+  font-style: italic!important;
+  margin-bottom: 0!important;
+  font-size: 1.25rem;
+  display: block;
+  margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-bottom: 0!important;
+    align-self: center!important;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 0 !important;
+}
+.card-price span {
+  margin-right: .25rem!important;
+}
+
+.cart-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.2rem 0.4rem;
+  background: var(--lightBlue);
+  border: none;
+  color: var(--mainWhite);
+  font-size: 1.4rem;
+  border-radius: 0.5rem 0 0 0;
+  transform: translate(100%, 100%);
+  transition: all 1s linear;
+}
+.cart-btn:hover {
+  color: var(--mainBlue);
+  cursor: pointer;
+}
+.image-container:hover .cart-btn {
+  transform: translate(0, 0);
+}
