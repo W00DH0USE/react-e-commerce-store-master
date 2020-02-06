@@ -440,3 +440,21 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 16.666667%;
   }
 }
+
+
+/* EmptyCart */
+.emptycart-container {
+  margin-top: 3rem!important;
+}
+
+.emptycart-title {
+  text-align: center!important;
+  margin-left: auto!important;
+  margin-right: auto!important;
+  flex: 0 0 83.333333%;
+  max-width: 83.333333%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
