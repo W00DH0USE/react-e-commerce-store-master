@@ -403,3 +403,40 @@ h1, h2, h3, h4, h5, h6 {
 .modal-price {
   color: #6c757d!important;
 }
+
+
+/* Cart */
+.cartColumns-container {
+  text-align: center!important;
+  display: none!important;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 992px) {
+  .cartColumns-container {
+    display: block!important;
+  }
+}
+
+.cart-column {
+  margin-left: auto!important;
+  margin-right: auto!important;
+  flex: 0 0 83.333333%;
+  max-width: 83.333333%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.cart-column p {
+  text-transform: capitalize!important;
+}
+@media (min-width: 992px) {
+  .cart-column {
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+  }
+}
