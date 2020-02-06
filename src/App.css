@@ -542,6 +542,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* CartTotal */
-.cartTotal {
-  
+.text-title strong {
+  font-family: "Oswald", sans-serif !important;
+  letter-spacing: 0.2rem;
 }
