@@ -18,6 +18,18 @@ h1 {
   font-size: 2.5rem;
 }
 
+h2 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: .5rem;
@@ -53,6 +65,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: space-between;
   padding: .5rem 1rem;
+  z-index: 1;
 }
 
 .navbar-logo {
@@ -130,6 +143,18 @@ h1, h2, h3, h4, h5, h6 {
 .buttonContainer-orange:hover {
   background: var(--mainYellow);
   color: var(--mainBlue);
+}
+
+.buttonContainer-red {
+  padding-left: 3rem!important;
+  padding-right: 3rem!important;
+  margin-bottom: 1rem!important;
+  border-color: red;
+  color: red;
+}
+.buttonContainer-red:hover {
+  background: red;
+  color: var(--mainWhite);
 }
 
 @media (min-width: 576px) {
@@ -281,6 +306,11 @@ h1, h2, h3, h4, h5, h6 {
 .cart-btn:hover {
   color: var(--mainBlue);
   cursor: pointer;
+}
+.cart-btn p {
+  text-transform: capitalize!important;
+  margin-bottom: 0!important;
+  margin-top: 0;
 }
 .image-container:hover .cart-btn {
   transform: translate(0, 0);
@@ -542,7 +572,57 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* CartTotal */
+.cartTotal-container {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  text-transform: capitalize!important;
+  text-align: right!important;
+  margin-top: .5rem!important;
+  flex: 0 0 83.333333%;
+  max-width: 83.333333%;
+}
+@media (min-width: 576px) {
+  .cartTotal-container {
+    margin-left: 3rem!important;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+}
+@media (min-width: 768px) {
+  .cartTotal-container {
+    margin-left: auto!important;
+  }
+}
+
 .text-title strong {
   font-family: "Oswald", sans-serif !important;
   letter-spacing: 0.2rem;
+}
+
+
+/* Default */
+.default-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-404 {
+  position: relative;
+  width: 100%;
+  text-transform: capitalize!important;
+  text-align: center!important;
+  margin-left: auto!important;
+  margin-right: auto!important;
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+  padding: 3rem!important;
+  z-index: -1;
 }
