@@ -1,9 +1,10 @@
 :root {
-  --mainBlue: #2a2a72;
+  --mainBlue: #00008B;
   --lightBlue: #009ffd;
   --mainWhite: #f3f3f3;
   --mainDark: #232528;
   --mainYellow: #ffa400;
+  --mainRed: #DC143C;
 }
 
 body {
@@ -42,9 +43,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-title {
-  font-family: "Permanent Marker", cursive;
+  font-family: 'Ubuntu', sans-serif;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
+}
+.text-title h1 {
+  color: var(--mainDark);
 }
 
 .text-blue {
@@ -53,6 +57,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .text-bright {
   color: var(--lightBlue);
+}
+
+.fa-trash {
+  color: var(--mainRed);
 }
 
 
@@ -78,6 +86,7 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
   vertical-align: middle;
   border-style: none;
+  height: 100px;
 }
 
 .navbar-ul {
@@ -107,6 +116,10 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   padding: .5rem 1rem;
   text-decoration: none;
+  transition: all .7s linear;
+}
+.navbar-link:hover {
+  color: var(--mainDark)!important;
 }
 
 .cart-link {
@@ -116,9 +129,9 @@ h1, h2, h3, h4, h5, h6 {
 .buttonContainer {
   text-transform: capitalize;
   font-size: 1.4rem;
-  background: transparent;
-  border: 0.05rem solid var(--lightBlue);
-  color: var(--lightBlue);
+  background: var(--mainWhite);
+  border: 0.05rem solid var(--mainDark);
+  color: var(--mainDark);
   border-radius: 0.5rem;
   padding: 0.2rem 0.5rem;
   cursor: pointer;
@@ -126,8 +139,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s ease-in-out;
 }
 .buttonContainer:hover {
-  background: var(--lightBlue);
-  color: var(--mainBlue);
+  color: var(--mainRed);
 }
 .buttonContainer:focus {
   outline: none;
@@ -142,7 +154,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .buttonContainer-orange:hover {
   background: var(--mainYellow);
-  color: var(--mainBlue);
+  color: var(--mainDark);
 }
 
 .buttonContainer-red {
@@ -295,7 +307,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   right: 0;
   padding: 0.2rem 0.4rem;
-  background: var(--lightBlue);
+  background: var(--mainRed);
   border: none;
   color: var(--mainWhite);
   font-size: 1.4rem;
@@ -304,7 +316,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all .7s linear;
 }
 .cart-btn:hover {
-  color: var(--mainBlue);
+  color: var(--mainDark);
   cursor: pointer;
 }
 .cart-btn p {

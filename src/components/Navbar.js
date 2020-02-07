@@ -10,7 +10,7 @@ export default class Navbar extends Component {
         Creative Commons (Attribution 3.0 Unported);
         https://www.iconfinder.com/Makoto_msk */}
         <Link to="/">
-          <img src={logo} alt="logo" className="navbar-logo" />
+          <img src="img/logo.png" alt="logo" className="navbar-logo" />
         </Link>
         <ul className="navbar-ul">
           <li>
