@@ -1,33 +1,136 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom";
-import logo from "../logo.svg";
+import {ProductConsumer} from "../context";
 
 export default class Navbar extends Component {
+  state = {
+    mobileNav: false,
+  };
+
+  handleMobileNav = () => {
+    this.setState((prevState) => {
+      return {mobileNav: !prevState.mobileNav}
+    });
+  };
+
   render() {
     return (
-      <nav className="navbar">
-        {/* https://www.iconfinder.com/icons/1243689/call_phone_icon
-        Creative Commons (Attribution 3.0 Unported);
-        https://www.iconfinder.com/Makoto_msk */}
-        <Link to="/">
-          <img src="img/logo.png" alt="logo" className="navbar-logo" />
-        </Link>
-        <ul className="navbar-ul">
-          <li>
-            <Link to="/" className="navbar-link">
-              products
+      <ProductConsumer>
+        {(value) => {
+          const {cart, cartSubTotal} = value;
+          return (
+          <nav className="navbar">
+            <Link to="/" className="logo-container" >
+              <img src="img/logo.png" alt="logo" className="brand-logo" />
             </Link>
-          </li>
-        </ul>
-        <Link to="/cart" className="cart-link">
-          <button className="buttonContainer">
-            <span>
-              <i className="fas fa-cart-plus" />
-            </span>
-            My Cart
-          </button>
-        </Link>
-      </nav>
+            <button type="button" className="navbar-burger navbar-toggler" onClick={this.handleMobileNav}>
+              <span className="toggler-icon">
+                <i className="fas fa-chevron-down"></i>
+                Menu
+              </span>
+            </button>
+            <div className={"navbar-mobile collapse" + (this.state.mobileNav ? " show" : "")} id="myNavbar">
+              <ul className="navbar-link-container">
+                <li>
+                  <Link to="/" className="navbar-link" onClick={this.handleMobileNav}>Home</Link>
+                </li>
+                <li>
+                  <Link to="/#about" className="navbar-link" onClick={this.handleMobileNav}>About</Link>
+                </li>
+                <li>
+                  <Link to="/products" className="navbar-link" onClick={this.handleMobileNav}>Products</Link>
+                </li>
+                <li>
+                  <Link to="/sell" className="navbar-link" onClick={this.handleMobileNav}>sell phone</Link>
+                </li>
+              </ul>
+              <div className="navbar-num-button-container">
+                <div className="navbar-num navbar-info">
+                  <span className="navbar-info-icon">
+                    <i className="fas fa-phone"></i>
+                  </span>
+                  <p>+ 123 456 789</p>
+                </div>
+                <div className="navbar-info" id="cart-info">
+                { cart.length > 0 ?
+                  <Link to="/cart" className="navbar-info navbar-info-cart">
+                    <span className="navbar-info-icon">
+                      <i className="fas fa-shopping-cart"></i>
+                    </span>
+                    { cart.length === 1 ? 
+                      <p>
+                      <span id="item-count">{cart.length}</span>
+                      {" "}item - $
+                      <span className="item-total">
+                        {cartSubTotal}
+                      </span>
+                    </p>
+                    :
+                    <p>
+                      <span id="item-count">{cart.length}</span>
+                      {" "}items - $
+                      <span className="item-total">
+                        {cartSubTotal}
+                      </span>
+                    </p>
+                    }
+                  </Link>
+                  : 
+                  <Link to="/cart" className="navbar-info navbar-info-cart">
+                    <span className="navbar-info-icon">
+                      <i className="fas fa-shopping-cart"></i>
+                    </span>
+                    <p>
+                      <span className="item-total">
+                        cart empty
+                      </span>
+                    </p>
+                  </Link>
+                }
+                </div>
+              </div>
+            </div>
+            <div className="navbar-info navbar-info-mobile" id="cart-info">
+              { cart.length > 0 ?
+                <Link to="/cart" className="navbar-info navbar-info-cart navbar-info-mobile" onClick={this.handleMobileNav}>
+                  <span className="navbar-info-icon">
+                    <i className="fas fa-shopping-cart"></i>
+                  </span>
+                  { cart.length === 1 ? 
+                      <p>
+                      <span id="item-count">{cart.length}</span>
+                    {" "}item - $
+                      <span className="item-total">
+                        {cartSubTotal}
+                      </span>
+                    </p>
+                    :
+                    <p>
+                      <span id="item-count">{cart.length}</span>
+                      {" "}items - $
+                      <span className="item-total">
+                        {cartSubTotal}
+                      </span>
+                    </p>
+                  }
+                </Link>
+                : 
+                <Link to="/cart" className="navbar-info navbar-info-cart navbar-info-mobile" onClick={this.handleMobileNav}>
+                  <span className="navbar-info-icon">
+                    <i className="fas fa-shopping-cart"></i>
+                  </span>
+                  <p>
+                    <span className="item-total">
+                      cart empty
+                    </span>
+                  </p>
+                </Link>
+              }
+            </div>
+          </nav>
+          )
+        }}
+      </ProductConsumer>
     )
   }
 }

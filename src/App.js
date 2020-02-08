@@ -3,6 +3,7 @@ import {Switch, Route} from "react-router-dom";
 import "./App.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
+import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import ProductList from "./components/ProductList";
 import Details from "./components/Details";
@@ -16,7 +17,8 @@ function App() {
     <React.Fragment>
       <Navbar />
       <Switch>
-        <Route exact path="/" component={ProductList} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/products" component={ProductList} />
         <Route path="/details" component={Details} />
         <Route path="/cart" component={Cart} />
         <Route component={Default} />
