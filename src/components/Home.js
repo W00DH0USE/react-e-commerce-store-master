@@ -11,6 +11,7 @@ export default class Home extends Component {
               <strong class="banner-title">D'Oh! Nut Sweet's</strong>
             </h1>
             <a href="#store" class="btn banner-link text-uppercase my-2">explore</a>
+            <a href="#store" class="btn banner-link text-uppercase my-2">explore</a>
           </div>
         </div>
       </div>
