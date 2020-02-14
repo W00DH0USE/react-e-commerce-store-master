@@ -35,9 +35,6 @@ export default class Navbar extends Component {
                   <Link to="/" className="navbar-link" onClick={this.handleMobileNav}>Home</Link>
                 </li>
                 <li>
-                  <Link to="/#about" className="navbar-link" onClick={this.handleMobileNav}>About</Link>
-                </li>
-                <li>
                   <Link to="/products" className="navbar-link" onClick={this.handleMobileNav}>Products</Link>
                 </li>
                 <li>
